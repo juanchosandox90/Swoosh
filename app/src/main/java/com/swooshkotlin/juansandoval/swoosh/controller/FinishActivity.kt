@@ -4,8 +4,8 @@ import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.swooshkotlin.juansandoval.swoosh.R
-import com.swooshkotlin.juansandoval.swoosh.utils.EXTRA_LEAGUE
-import com.swooshkotlin.juansandoval.swoosh.utils.EXTRA_SKILL
+import com.swooshkotlin.juansandoval.swoosh.model.Player
+import com.swooshkotlin.juansandoval.swoosh.utils.EXTRA_PLAYER
 import kotlinx.android.synthetic.main.activity_finish.*
 
 class FinishActivity : AppCompatActivity() {
@@ -15,9 +15,8 @@ class FinishActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_finish)
 
-        val league = intent.getStringExtra(EXTRA_LEAGUE)
-        val skill = intent.getStringExtra(EXTRA_SKILL)
+        val player = intent.getParcelableExtra<Player>(EXTRA_PLAYER)
 
-        searchLeaguesText.text = "looking for a $league $skill beginner league near you…"
+        searchLeaguesText.text = "looking for a ${player.league} ${player.skill} beginner league near you…"
     }
 }
