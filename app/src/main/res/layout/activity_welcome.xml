@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.swooshkotlin.juansandoval.swoosh.WelcomeActivity">
+    tools:context="com.swooshkotlin.juansandoval.swoosh.controller.WelcomeActivity">
 
     <ImageView
         android:id="@+id/imageView"
