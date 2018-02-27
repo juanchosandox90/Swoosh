@@ -36,6 +36,7 @@ class LeagueActivity : BaseActivity() {
     fun leagueNextClicked(view: View) {
         if (selectedLeague != "") {
             val skillActivity = Intent(this, SkillActivity::class.java)
+            skillActivity.putExtra(EXTRA_LEAGUE, selectedLeague)
             startActivity(skillActivity)
         } else {
             Toast.makeText(this, "You have to choose a League", Toast.LENGTH_LONG).show()
